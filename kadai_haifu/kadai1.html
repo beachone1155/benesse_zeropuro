@@ -1,0 +1,27 @@
+<html><head>
+<meta charset="utf-8"> <title>課題1</title>
+<script>
+function checksuji(){
+	if(document.getElementById('suji1').value > document.getElementById('suji2').value){
+		document.getElementById("answer").innerHTML = "数字1が大きいです。";
+	}else if(document.getElementById('suji1').value < document.getElementById('suji2').value) {
+		document.getElementById("answer").innerHTML = "数字2が大きいです。"
+	}else{
+		document.getElementById("answer").innerHTML = "数字1と数字2は同じ値です。";
+	}
+}
+</script>
+</head>
+<body>
+	トラブルシューティング１<br>
+	1桁の数値のどちらの数値が大きいかを判定します。<br>
+	数字1<input type="number" id="suji1"><br>
+	数字2<input type="number" id="suji2"><br>
+	<button onclick = checksuji();>
+	大小チェック！
+	</button>
+
+	<div id="answer">ここに答えが出ます</div>
+
+</body>
+</html> 

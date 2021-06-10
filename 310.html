@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <script>
+        function ahochecker() {
+            if (document.getElementById('number').value == 3) {
+                document.getElementById("answer").innerHTML = "アホ";
+            } else {
+                document.getElementById("answer").innerHTML = "普通です";
+            }
+        }
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>if文による表示</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    数字を入力してください。
+    <input type="text" id="number"><br>
+    <button onclick="ahochecker();">
+        ボタンを押してください</button>
+    <hr>
+    <div id="answer"></div>
+</body>
+
+</html>

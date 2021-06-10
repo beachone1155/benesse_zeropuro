@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>課題6</title>
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+
+		// ライブラリのロード
+		// name:visualization(可視化),version:バージョン(1),packages:パッケージ(corechart)
+		google.load('visualization', '1', { 'packages': ['corechart'] });
+		// グラフを描画する為のコールバック関数を指定
+		google.setOnLoadCallback(drawChart);
+
+		// グラフの描画   
+		function drawChart() {
+
+			// 配列からデータの生成
+			var data = google.visualization.arrayToDataTable([
+				['学期', '成績', ],
+				['1学期', 76, ],
+				['2学期', 68, ],
+				['3学期', 92, ],
+				
+			]);
+
+			// オプションの設定
+			var options = {
+				title: '佐藤君の成績'
+			};
+
+			// 指定されたIDの要素に折れ線グラフを作成
+			var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+			// グラフの描画
+			chart.draw(data, options);
+		}
+	</script>
+</head>
+
+<body>
+	最終課題(google chart api)<br>
+	以下の表で表された佐藤くんの成績を折れ線グラフで表示せよ。<br><br>
+	<table border="1">
+		<tr>
+			<th>1学期</th>
+			<th>2学期</th>
+			<th>3学期</th>
+		</tr>
+		<tr>
+			<td>76</td>
+			<td>68</td>
+			<td>92</td>
+		</tr>
+	</table>
+	<br><br>
+	<!--  グラフの描画エリア -->
+	<div id="chart_div" style="width: 50%; height: 350px"></div>
+
+</body>
+
+</html>

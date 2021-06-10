@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <script>
+        function tenchecker() {
+            if (document.getElementById("number1").value >= 10 && document.getElementById("number2").value >= 10) {
+                alert("OK");
+            } else {
+                alert("NG");
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>if文による表示2</title>
+</head>
+
+<body>
+    数字を２つ入力して下さい。<br>
+    <input type="number" id="number1"><br>
+    <input type="number" id="number2"><br>
+    <button onclick=tenchecker();>チェック！</button>
+</body>
+
+</html>

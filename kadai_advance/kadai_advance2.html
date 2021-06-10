@@ -1,0 +1,47 @@
+<html><head>
+<meta charset="utf-8"> <title>応用課題2</title>
+<script>
+	function getData(){
+		var first_ave = (76 + 30 + 53) / 3;
+		var first_max = Math.max(76,30,53);
+		document.getElementById("1st_ave").innerHTML = first_ave;
+		document.getElementById("1st_max").innerHTML = first_max;
+	}
+</script>
+</head>
+<body>
+	応用課題<br>
+	以下の表で表された１学期の平均点と最高点を表示せよ<br><br>
+	<table border="1" id="sample">
+		<tr>
+			<th>氏名</th>
+			<th>1学期</th>
+			<th>2学期</th>
+			<th>3学期</th>
+		</tr>
+		<tr>
+			<td>佐藤</td>
+			<td>76</td>
+			<td>68</td>
+			<td>92</td>
+		</tr>
+		<tr>
+			<td>鈴木</td>
+			<td>30</td>
+			<td>38</td>
+			<td>52</td>
+		</tr>
+		<tr>
+			<td>山田</td>
+			<td>53</td>
+			<td>70</td>
+			<td>80</td>
+		</tr>
+	</table>
+	<br><br>
+	<button onclick=getData();>データ分析</button><br>
+	１学期の平均値<div id="1st_ave">ここに１学期の平均値を表示する</div><br>
+	１学期の最大値<div id="1st_max">ここに１学期の最大値を表示する</div>
+
+</body>
+</html> 

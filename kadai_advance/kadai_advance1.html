@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>応用課題</title>
+	<script>
+		function jyanken() {
+			var you = document.getElementById('you').value;
+			var computer = Math.round(Math.random() * 2);
+			if (you == 0) {
+				if (computer == 0) {
+					var answer = "引き分け";
+				} else if (computer == 1) {
+					var answer = "あなたの勝ち";
+				} else {
+					var answer = "コンピュータの勝ち";
+				}
+			} else if (you == 1) {
+				if (computer == 0) {
+					var answer = "コンピュータの勝ち";
+				} else if (computer == 1) {
+					var answer = "引き分け";
+				} else {
+					var answer = "あなたの勝ち";
+				}
+			} else if (you == 2) {
+				if (computer == 0) {
+					var answer = "あなたの勝ち";
+				} else if (computer == 1) {
+					var answer = "コンピュータの勝ち";
+				} else {
+					var answer = "引き分け";
+				}
+			}
+
+			if (computer == 0) {
+				var answer2 = "ぐー";
+			} else if (computer == 1) {
+				var answer2 = "ちょき";
+			} else if (computer == 2) {
+				var answer2 = "ぱー";
+			}
+
+			//コンピュータの手はランダムとする
+			//オンライン課題のランダムの課題を参考にすること
+			//コンピュータの手は0,1,2のどれかにすること
+
+			//あとはif文を使って勝ち負けを判定する 例:あなたが0,コンピュータも0なら「あいこ」
+
+			//プログラムが完成したら、
+			//1.勝敗によって適切な画像を表示するようにしてみてください。
+			//2.また、できるだけ美しいプログラムにしてみてください。
+
+			document.getElementById("answer").innerHTML = answer;
+			document.getElementById("answer2").innerHTML = answer2;
+		}
+	</script>
+</head>
+
+<body>
+	応用課題その１(じゃんけん)<br><br>
+	あなたとコンピュータがじゃんけんをするプログラムを書きなさい。<br><br>
+	あなたの手<select id="you">
+		<option value=0>ぐー</option>
+		<option value=1>ちょき</option>
+		<option value=2>ぱー</option>
+	</select><br>
+
+
+
+	<button onclick=jyanken();>
+		じゃんけんぽん！
+	</button><br>
+
+	コンピュータの手 <div id="answer2">ここにコンピュータの手がでます</div><br>
+	<div id="answer">ここに勝ち負けと相手の手がでます</div>
+	<div id="answer3"><img src="u" alt=""> ここに画像がでます</div>
+</body>
+
+</html>

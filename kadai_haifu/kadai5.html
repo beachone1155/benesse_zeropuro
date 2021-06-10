@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>課題5</title>
+	<script>
+		function draw() {
+			var suji = parseInt(document.getElementById('suji').value);
+			var answer = "";
+			for (var i = 1; i <= suji; i++) {
+
+				//この課題は２重ループを使います。
+				for (var j = 1; j <= suji; j++) { //var が j であることに注意！列のループ
+					if (suji % 2 == 1) {
+						if (j == suji - i + 1) {
+							answer += "×";
+						} else {
+							answer = answer + "◯";//元々のanswerに✕をくっつけたものをanswerとする
+						}
+					}else{
+						answer = answer + "◯";
+					}
+				}
+				//改行をくっつけることもできる
+				answer = answer + "<br>";
+			}
+			document.getElementById("answer").innerHTML = answer;
+
+		}
+	</script>
+</head>
+
+<body>
+	アルゴリズム課題その３(図形の表示)<br>
+	数字：<input type="text" id="suji"><br>
+	<button onclick=draw();>
+		実行！
+	</button>
+	<div id="answer"></div>
+
+</body>
+
+</html>
